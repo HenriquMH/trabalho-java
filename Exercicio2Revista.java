@@ -1,5 +1,9 @@
 package Exercicios;
 
+/**
+ * Classe Exercicio2Revista representa uma revista na biblioteca.
+ * Implementa os métodos de emprestar, devolver e reservar específicos para revistas.
+ */
 public class Exercicio2Revista extends Exercicio2Publicacao implements Exercicio2Reservavel {
 
     private boolean emprestada;
@@ -9,6 +13,10 @@ public class Exercicio2Revista extends Exercicio2Publicacao implements Exercicio
         this.emprestada = false;
     }
 
+    /**
+     * Implementa o método para emprestar a revista.
+     * Marca a revista como emprestada se não estiver emprestada.
+     */
     @Override
     public void emprestar() {
         if (!emprestada) {
@@ -19,6 +27,10 @@ public class Exercicio2Revista extends Exercicio2Publicacao implements Exercicio
         }
     }
 
+    /**
+     * Implementa o método para devolver a revista.
+     * Marca a revista como disponível se estiver emprestada.
+     */
     @Override
     public void devolver() {
         if (emprestada) {
@@ -29,6 +41,10 @@ public class Exercicio2Revista extends Exercicio2Publicacao implements Exercicio
         }
     }
 
+    /**
+     * Implementa o método para reservar a revista.
+     * Indica que a reserva foi realizada.
+     */
     @Override
     public void reservar() {
         System.out.println("A revista '" + titulo + "' foi reservada.");

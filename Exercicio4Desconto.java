@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Exercicios;
 
 /**
- *
- * @author C108
+ * Interface Exercicio4Desconto define o método para aplicar desconto em um pedido.
  */
-public class Exercicio4Desconto {
-    
+public interface Exercicio4Desconto {
+    /**
+     * Aplica um desconto ao total do pedido.
+     *
+     * @return valor do desconto aplicado
+     */
+    double aplicarDesconto(double total);
 }

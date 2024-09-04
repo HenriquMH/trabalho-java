@@ -1,5 +1,9 @@
 package Exercicios;
 
+/**
+ * Classe Exercicio2Livro representa um livro na biblioteca.
+ * Implementa os métodos de emprestar, devolver e reservar específicos para livros.
+ */
 public class Exercicio2Livro extends Exercicio2Publicacao implements Exercicio2Reservavel {
 
     private boolean emprestado;
@@ -9,6 +13,10 @@ public class Exercicio2Livro extends Exercicio2Publicacao implements Exercicio2R
         this.emprestado = false;
     }
 
+    /**
+     * Implementa o método para emprestar o livro.
+     * Marca o livro como emprestado se não estiver emprestado.
+     */
     @Override
     public void emprestar() {
         if (!emprestado) {
@@ -19,6 +27,10 @@ public class Exercicio2Livro extends Exercicio2Publicacao implements Exercicio2R
         }
     }
 
+    /**
+     * Implementa o método para devolver o livro.
+     * Marca o livro como disponível se estiver emprestado.
+     */
     @Override
     public void devolver() {
         if (emprestado) {
@@ -28,9 +40,13 @@ public class Exercicio2Livro extends Exercicio2Publicacao implements Exercicio2R
             System.out.println("O livro '" + titulo + "' não estava emprestado.");
         }
     }
-    
+
+    /**
+     * Implementa o método para reservar o livro.
+     * Indica que a reserva foi realizada.
+     */
     @Override
     public void reservar() {
-        System.out.println("O livro '" + titulo + "' já foi reservado");
+        System.out.println("O livro '" + titulo + "' foi reservado.");
     }
 }
